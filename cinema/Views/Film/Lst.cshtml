@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<Film>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <title>Lst</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Year</td>
+                <td>@item.Country.Name</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
